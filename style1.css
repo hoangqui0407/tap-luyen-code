@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
+
+.center-text{
+    background-color:rgb(0, 0, 0);
+        width: 100%;
+        color: rgb(225, 12, 168);
+        height:100%;
+        font-size: 20px;
+        font-style: italic;
+        justify-content: center;
+        font-family: 'Codystar';
+        align-items: center;
+        display: flex;
+        background: black;
+        align-items: center;
+        justify-content: center;
+       
+}
+#back
+{
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+
+}    
+span{
+  position: absolute;
+  pointer-events: none;
+  animation: face 1s linear infinite;
+  filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+  
+}
+@keyframes face
+{
+  0%,100%
+  {
+      opacity: 0;
+  }
+  30%,60%
+  {
+      opacity: 100;
+  }
+}
+span::before
+{
+  content : '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background : url(heart.png);
+  background-size: cover;
+  animation: moveShape 1s linear infinite;
+}
+@keyframes moveShape
+{
+  0%
+  {
+    transform: translate(0) rotate (0deg);
+  }
+  100%
+  {
+    transform: translate(300px) rotate (360deg);
+  }
+}
+
+ 
+
+
+ .center-text h1 {
+   font-size: 3rem;
+   text-align: center;
+    font-weight: bold;
+   -webkit-animation: glow 2s ease-in-out infinite alternate;
+   -moz-animation: glow 2s ease-in-out infinite alternate;
+   animation: glow 2s ease-in-out infinite alternate;
+ }
+ 
+ @-webkit-keyframes glow {
+      from {
+       color: #f11282;
+     text-shadow: 0 0 10px hsl(323, 91%, 68%), 0 0 20px #f53fa3, 0 0 30px #00fff2, 0 0 40px , 0 0 50px #f756a6, 0 0 60px #e9239d, 0 0 70px #ffffff, 0 0 90px #ffffff;
+   }
+   
+   to {
+      color: rgb(236, 157, 190);
+     text-shadow: 0 0 20px #e9a2d1, 0 0 30px #e987bd, 0 0 40px #ffd6ed, 0 0 50px #00fff2, 0 0 60px #ffe9f4, 0 0 70px #f5c9ea, 0 0 80px #ffffff, 0 1 90px #ffffff;
+   }
+
+ }
